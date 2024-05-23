@@ -6,6 +6,7 @@ import groupRoutes from './routes/group.routes.js'
 import systemRoutes from './routes/system.routes.js'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+import { FRONT_END_ORIGIN } from './config.js'
 
 // Inicializar app express:
 const app = express()
@@ -23,7 +24,7 @@ app.use(cookieParser())
 // Gestor politica CORS:
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: FRONT_END_ORIGIN,
     credentials: true,
   })
 )

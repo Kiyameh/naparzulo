@@ -2,7 +2,6 @@ import User from '../models/User.model.js';
 import bcrypt from 'bcryptjs';
 import { createAccessToken } from '../libs/webtoken.js';
 import jwt from 'jsonwebtoken'
-import { LOGIN_TOKEN_SECRET } from '../../config.js';
 
 // Tareas de consulta, edición, eliminación y actualización de usuarios.
 
@@ -118,7 +117,7 @@ export const verifyToken = async (req, res) =>{
   if(!token) return res.status(401).json({message: '<Moogonse> No hay token'})
   
 
-  jwt.verify(token, LOGIN_TOKEN_SECRET, async (err, user)=>{
+  jwt.verify(token, process.env.LOGIN_TOKEN_SECRET, async (err, user)=>{
     if(err) return res.status(401).json({message: '<Moogonse> Token no valido'})
 
     const userFound = await User.findById(user.id)

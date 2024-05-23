@@ -1,7 +1,6 @@
 // Validación de un token de JsonWebToken
 
 import jwt from 'jsonwebtoken';
-import { LOGIN_TOKEN_SECRET } from '../../config.js';
 
 export const checkAuthentication = (req, res, next) => {
   // Recibir token de los cookies del navegador:
@@ -13,7 +12,7 @@ export const checkAuthentication = (req, res, next) => {
   }
 
   // Extraer id de usuario del token:
-  jwt.verify(token, LOGIN_TOKEN_SECRET, (error, decodedToken) => {
+  jwt.verify(token, process.env.LOGIN_TOKEN_SECRET, (error, decodedToken) => {
     if (error) {
       return res.status(403).json({ message: '<JWT> Token invalido' });
     }

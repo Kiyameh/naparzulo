@@ -1,0 +1,118 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "caves_functions",
+    "dateExported": "2024-03-21T03:13:16.791Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4cb043d7-ef2e-4fa8-ade7-7f24702c8151",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "get_caves_all",
+            "url": "http://localhost:3000/caves",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-16T15:18:25.011Z",
+            "modified": "2024-02-16T15:44:19.238Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4b68bf4-81d3-450c-9e6a-acee8adfd04e",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "add_cave_Roble",
+            "url": "http://localhost:3000/caves",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-16T15:21:19.521Z",
+            "modified": "2024-02-16T15:21:19.521Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"catalog\":\"NA-1111\",\n  \"cavename\":\"Sima del Roble\",\n  \"x_coord\":57000,\n  \"y_coord\":7653452\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "74a4b244-442b-41be-8af0-6185a34f914d",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "add_cave_Basaura",
+            "url": "http://localhost:3000/caves",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-16T15:30:47.808Z",
+            "modified": "2024-02-16T15:42:58.185Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"catalog\":\"NA-3333\",\n  \"cavename\":\"Cueva de Basaura\",\n  \"alt_cavename\":\"Cueva de Basaula\",\n  \"description\":\"Cueva de grandes dimensiones\",\n  \"type\":\"Cueva\",\n  \"regulations\":\"prohibida\",\n  \"x_coord\":57000,\n  \"y_coord\":7653452,\n  \"coord_proyec\":\"ETRS89\",\n  \"coord_format\":\"UTM 30T\",\n  \"z_coord\":750,\n  \"length\":\"8000\",\n  \"depth\":\"120\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "63ccb8f9-e938-43c7-a358-d5389cb32579",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "delete_cave",
+            "url": "http://localhost:3000/caves/65cf81fb43a3a60e7a72425b",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-16T15:37:51.888Z",
+            "modified": "2024-02-16T15:43:38.761Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"catalog\":\"NA-2222\",\n  \"cavename\":\"Cueva de Basaula\",\n  \"alt_cavename\":\"Cueva de Basaura\",\n  \"description\":\"Cueva de grandes dimensiones\",\n  \"type\":\"Cueva\",\n  \"regulations\":\"prohibida\",\n  \"x_coord\":57000,\n  \"y_coord\":7653452,\n  \"coord_proyec\":\"ETRS89\",\n  \"coord_format\":\"UTM 30T\",\n  \"lenght\":\"8000\",\n  \"depth\":\"120\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "089ebb9f-1fe8-4871-be0c-9ef4a5a1d4e4",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "get_caves_one",
+            "url": "http://localhost:3000/caves/65cf81a943a3a60e7a724259",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-16T15:44:53.864Z",
+            "modified": "2024-02-16T15:44:53.864Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"catalog\":\"NA-2222\",\n  \"cavename\":\"Cueva de Basaula\",\n  \"alt_cavename\":\"Cueva de Basaura\",\n  \"description\":\"Cueva de grandes dimensiones\",\n  \"type\":\"Cueva\",\n  \"regulations\":\"prohibida\",\n  \"x_coord\":57000,\n  \"y_coord\":7653452,\n  \"coord_proyec\":\"ETRS89\",\n  \"coord_format\":\"UTM 30T\",\n  \"lenght\":\"8000\",\n  \"depth\":\"120\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "258eec3e-576e-4c31-a5bd-cd545c0efbf2",
+            "colId": "30e86193-a0ae-4e16-9ccd-25c7bf13e48b",
+            "containerId": "",
+            "name": "update_cave_one",
+            "url": "http://localhost:3000/caves/65cf7d599a72608033bc0b1d",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-16T15:46:56.228Z",
+            "modified": "2024-02-16T15:46:56.228Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"catalog\":\"NA-1111\",\n  \"cavename\":\"Sima del Roble\",\n  \"description\":\"Cueva de grandes dimensiones\",\n  \"type\":\"Sima\",\n  \"regulations\":\"prohibida\",\n  \"x_coord\":57000,\n  \"y_coord\":7653452,\n  \"coord_proyec\":\"ETRS89\",\n  \"coord_format\":\"UTM 30T\",\n  \"lenght\":\"8000\",\n  \"depth\":\"120\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

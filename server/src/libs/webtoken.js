@@ -1,7 +1,7 @@
 // Generar token de JsonWebToken
 
 import jwt from 'jsonwebtoken';
-import { LOGIN_TOKEN_SECRET as secret } from '../config.js';
+import { LOGIN_TOKEN_SECRET as secret } from '../../config.js';
 
 // Crear token de acceso mediante modulo jsonWebtokens
 export function createAccessToken(payload) {

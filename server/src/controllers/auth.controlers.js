@@ -2,7 +2,7 @@ import User from '../models/User.model.js';
 import bcrypt from 'bcryptjs';
 import { createAccessToken } from '../libs/webtoken.js';
 import jwt from 'jsonwebtoken'
-import { LOGIN_TOKEN_SECRET } from '../config.js';
+import { LOGIN_TOKEN_SECRET } from '../../config.js';
 
 // Tareas de consulta, edición, eliminación y actualización de usuarios.
 

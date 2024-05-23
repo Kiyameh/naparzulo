@@ -1,7 +1,7 @@
 // Validación de un token de JsonWebToken
 
 import jwt from 'jsonwebtoken';
-import { LOGIN_TOKEN_SECRET } from '../config.js';
+import { LOGIN_TOKEN_SECRET } from '../../config.js';
 
 export const checkAuthentication = (req, res, next) => {
   // Recibir token de los cookies del navegador:

@@ -7,16 +7,16 @@ export const checkAuthentication = (req, res, next) => {
 
   console.log('<JWT> Verificando Token')
   const {token} = req.cookies
+  
+  // TO-DO : Corregir envío de token desde el cliente. Cuando eso este hecho retirar esta linea:
+  next()
 
   // Verificaar si hay token:
   if (!token) {
     return res.status(401).json({message: '<JWT> Necesario iniciar sesión'})
   }
 
-  // TO-DO : Corregir envío de token desde el cliente. Cuando eso este hecho retirar esta linea:
-  next()
-
-  // Extraer id de usuario del token:
+    // Extraer id de usuario del token:
   jwt.verify(token, process.env.LOGIN_TOKEN_SECRET, (error, decodedToken) => {
     if (error) {
       return res.status(403).json({message: '<JWT> Token invalido'})

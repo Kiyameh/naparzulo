@@ -14,7 +14,7 @@ import {
 const groupRoutes = Router();
 
 groupRoutes.get('/groups', viewGroupList);
-groupRoutes.get('/group/:id', checkAuthentication, viewGroup); 
+groupRoutes.get('/group/:id', viewGroup); 
 groupRoutes.delete('/group/:id', checkAuthentication, deleteGroup);
 groupRoutes.post('/group', checkAuthentication, addGroup);
 groupRoutes.put('/group/:id', checkAuthentication, editGroup);

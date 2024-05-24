@@ -14,7 +14,7 @@ import {
 const systemRoutes = Router();
 
 systemRoutes.get('/systems', viewSystemList);
-systemRoutes.get('/system/:id', checkAuthentication, viewSystem); 
+systemRoutes.get('/system/:id', viewSystem); 
 systemRoutes.delete('/system/:id', checkAuthentication, deleteSystem);
 systemRoutes.post('/system', checkAuthentication, addSystem);
 systemRoutes.put('/system/:id', checkAuthentication, editSystem);

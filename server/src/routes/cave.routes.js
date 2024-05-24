@@ -15,10 +15,16 @@ const caveRoutes = Router();
 
 caveRoutes.get('/caves', viewCaveList);
 caveRoutes.get('/cave/:id', viewCave); 
-caveRoutes.delete('/cave/:id', checkAuthentication, deleteCave);
-caveRoutes.post('/cave', checkAuthentication, addCave);
-caveRoutes.put('/cave/:id', checkAuthentication, editCave);
 
+caveRoutes.delete('/cave/:id', deleteCave);
+caveRoutes.post('/cave', addCave);
+caveRoutes.put('/cave/:id', editCave);
+
+
+// TO-DO: Validación del token de cliente (corregir envío del ciente en producción)
+// caveRoutes.delete('/cave/:id', checkAuthentication, deleteCave);
+// caveRoutes.post('/cave', checkAuthentication, addCave);
+// caveRoutes.put('/cave/:id', checkAuthentication, editCave);
 
 
 // TO-DO: Validación back-end de la cavidad creada: 

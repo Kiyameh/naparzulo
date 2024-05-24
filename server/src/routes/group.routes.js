@@ -15,9 +15,16 @@ const groupRoutes = Router();
 
 groupRoutes.get('/groups', viewGroupList);
 groupRoutes.get('/group/:id', viewGroup); 
-groupRoutes.delete('/group/:id', checkAuthentication, deleteGroup);
-groupRoutes.post('/group', checkAuthentication, addGroup);
-groupRoutes.put('/group/:id', checkAuthentication, editGroup);
+
+groupRoutes.delete('/group/:id', deleteGroup);
+groupRoutes.post('/group', addGroup);
+groupRoutes.put('/group/:id', editGroup);
+
+// TO-DO: Validación del token de cliente (corregir envío del ciente en producción)
+
+// groupRoutes.delete('/group/:id', checkAuthentication, deleteGroup);
+// groupRoutes.post('/group', checkAuthentication, addGroup);
+// groupRoutes.put('/group/:id', checkAuthentication, editGroup);
 
 // TO-DO: Validación back-end del grupo creado: 
 //  groupRoutes.post('/group', checkAuthentication, validateSchema( - CREAR ESQUEMA - ), addGroup);

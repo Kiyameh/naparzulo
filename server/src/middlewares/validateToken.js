@@ -8,8 +8,6 @@ export const checkAuthentication = (req, res, next) => {
   console.log('<JWT> Verificando Token')
   const {token} = req.cookies
   
-  // TO-DO : Corregir envío de token desde el cliente. Cuando eso este hecho retirar esta linea:
-  next()
 
   // Verificaar si hay token:
   if (!token) {

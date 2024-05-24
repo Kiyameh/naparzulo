@@ -6,6 +6,7 @@ export const checkAuthentication = (req, res, next) => {
   // Recibir token de los cookies del navegador:
 
   console.log('<JWT> Verificando Token')
+  console.log(req)
   const { token } = req.cookies;
   
   // Verificaar si hay token:

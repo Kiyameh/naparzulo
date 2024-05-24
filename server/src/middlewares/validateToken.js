@@ -6,6 +6,8 @@ export const checkAuthentication = (req, res, next) => {
   // Recibir token de los cookies del navegador:
   const { token } = req.cookies;
 
+  
+
   // Verificaar si hay token:
   if (!token) {
     return res.status(401).json({ message: '<JWT> Necesario iniciar sesión' });
@@ -22,4 +24,6 @@ export const checkAuthentication = (req, res, next) => {
 
     next();
   });
+
+  return res.status(401).json({message:'<JWT> No autorizado por motivo desconocido'})
 };

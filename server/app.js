@@ -6,6 +6,8 @@ import groupRoutes from './src/routes/group.routes.js'
 import systemRoutes from './src/routes/system.routes.js'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+import 'dotenv/config'
+
 
 // Inicializar app express:
 const app = express()

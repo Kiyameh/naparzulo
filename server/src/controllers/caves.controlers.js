@@ -1,6 +1,6 @@
 import Cave from '../models/Cave.model.js';
 
-// Tareas de consulta, edición, eliminación y actualización de cavidades.
+// Tareas de consulta, edición, eliminación y actualización de cavidades:
 
 export const viewCaveList = async (req, res) => {
   const caveList = await Cave.find();
@@ -63,7 +63,6 @@ export const addCave = async (req, res) => {
   console.log(`<Moongose> Cueva ${newCave.cavename} creada`);
 
   res.json(savedCave);
-
 };
 
 export const deleteCave = async (req, res) => {
@@ -87,7 +86,7 @@ export const editCave = async (req, res) => {
   }
   console.log(`<Moongose> Cueva ${updatedCave.cavename} actualizada`);
 
-  res.json(updatedCave);
+    res.json(updatedCave);
 };
 
 export const viewCave = async (req, res) => {
@@ -96,6 +95,7 @@ export const viewCave = async (req, res) => {
   if (!foundCave) {
     return res.status(404).json({ message: '<Moongose> Cueva no encontrada' });
   }
+
   console.log(`<Moongose> Cueva ${foundCave.cavename} mostrada`);
 
   res.json(foundCave);

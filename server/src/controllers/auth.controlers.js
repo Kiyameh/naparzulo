@@ -101,6 +101,7 @@ export const profile = async (req, res) => {
   }
 
   // Devolver usuario si la comprobación es correcta.
+
   return res.json({
     id: userFound._id,
     username: userFound.username,
@@ -112,6 +113,7 @@ export const profile = async (req, res) => {
 };
 
 export const verifyToken = async (req, res) =>{
+  console.log(req)
   const {token} = req.cookies
 
   if(!token) return res.status(401).json({message: '<Moogonse> No hay token'})

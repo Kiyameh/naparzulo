@@ -12,8 +12,12 @@ import Link from '@mui/material/Link'
 
 import {useNavigate} from 'react-router-dom'
 
+// Layout de la pagina de inicio. 
+
+
 function LandingPage() {
   const navigate = useNavigate()
+  // Carga de imagen aleatoria al principio: 
   const landingImages = [Landing1, Landing2, Landing3]
   const randomNumber = Math.floor(Math.random() * landingImages.length)
   return (

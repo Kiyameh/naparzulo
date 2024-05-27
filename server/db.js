@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const conectionURI =
   `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}Mgo$@subterradb.c0hrufd.mongodb.net/?retryWrites=true&w=majority`;
  
-
+// Conexión principal con la base de datos
 export const connectDB = async () => {
   try {
     await mongoose.connect(conectionURI);

@@ -7,10 +7,7 @@ import SendIcon from '@mui/icons-material/Send'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 
-import Dialog from '@mui/material/Dialog'
-import DialogActions from '@mui/material/DialogActions'
-import DialogTitle from '@mui/material/DialogTitle'
-import { DetailDataContext } from '../../context/DetailDataContext'
+// Componente de botones de control para vista lista y vista detalles
 
 function ControlBox({
   handleCreate,
@@ -19,6 +16,8 @@ function ControlBox({
   handleDiscard,
   handleDelete,
 }) {
+
+  // Control de autorización: 
   const {user} = useContext(AuthContext)
   const [unauthorized, setUnauthorized] = useState(true)
 

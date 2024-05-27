@@ -1,5 +1,6 @@
 import instance from './axios'
 
+// Puntos de conexión con la API para datos
 
 export const caveListRequest = () => instance.get('/caves')
 export const caveRequest = (id) => instance.get(`/cave/${id}`)

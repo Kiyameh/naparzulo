@@ -29,7 +29,9 @@ function App() {
               <Route path="/register" element={<RegisterModal />} />
               <Route path="/profile" element={<ProfileModal />} />
               <Route path="/unautorized" element={<Unautorized />} />
-              <Route path="/:datatype/list" element={<ListView />} />
+              <Route path="/cave/list" element={<ListView />} />
+              <Route path="/group/list" element={<ListView />} />
+              <Route path="/system/list" element={<ListView />} />
 
               <Route element={<ProtectedViews/>}>              
                 <Route path="/:datatype/:action" element={<DetailView/>} />

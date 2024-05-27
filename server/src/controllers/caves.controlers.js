@@ -2,6 +2,7 @@ import Cave from '../models/Cave.model.js';
 
 // Tareas de consulta, edición, eliminación y actualización de cavidades:
 
+// Función busqueda de cavidades mediante moongose
 export const viewCaveList = async (req, res) => {
   const caveList = await Cave.find();
 
@@ -10,6 +11,7 @@ export const viewCaveList = async (req, res) => {
   res.json(caveList);
 };
 
+// Función añadir cavidad mediante moongose
 export const addCave = async (req, res) => {
   const {
     dataSource,
@@ -34,7 +36,6 @@ export const addCave = async (req, res) => {
     massif
   } = req.body;
   const newCave = new Cave({
-    createdBy: req.user.id,
     dataSource,
     catalog,
     initials,
@@ -65,6 +66,7 @@ export const addCave = async (req, res) => {
   res.json(savedCave);
 };
 
+// Función borrar cavidad mediante moongose
 export const deleteCave = async (req, res) => {
   const deletedCave = await Cave.findByIdAndDelete(req.params.id);
 
@@ -77,6 +79,7 @@ export const deleteCave = async (req, res) => {
   return res.sendStatus(204);
 };
 
+// Función editar cavidad mediante moongose
 export const editCave = async (req, res) => {
   const updatedCave = await Cave.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
@@ -89,6 +92,7 @@ export const editCave = async (req, res) => {
     res.json(updatedCave);
 };
 
+// Función obtener cavidad mediante moongose
 export const viewCave = async (req, res) => {
 
   const foundCave = await Cave.findById(req.params.id);

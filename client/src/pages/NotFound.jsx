@@ -6,6 +6,8 @@ import './NotFound.css'
 
 import {useNavigate} from 'react-router-dom'
 
+// Layout para pagina no encontrada
+
 function NotFound() {
   const navigate = useNavigate()
 

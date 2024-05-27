@@ -1,3 +1,5 @@
+// Modelos de columnas para cargar en el DataGrid según datos mostrados
+
 export const cavesColumns = [
   {
     field: 'id',

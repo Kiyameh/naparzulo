@@ -1,3 +1,4 @@
+// Opciones disponibles en los inputs
 
 export const CAVE_TYPE_OPTIONS = [
   undefined,

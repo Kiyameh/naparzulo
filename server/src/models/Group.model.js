@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 // Modelo de grupo/club
 const groupSchema = new mongoose.Schema(
   {
-    createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+    createdBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
     groupname: { type: String, required: true, trim: true },
     acronym: { type: String, trim: true },
     description: { type: String, trim: true },

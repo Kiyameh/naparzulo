@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const systemSchema = new mongoose.Schema(
   {
     // Metadata
-    createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+    createdBy: { type: mongoose.Schema.ObjectId, ref: 'User' },
     dataSource: { type: String, trim: true },
     // General data
     catalog: { type: String, unique: true, trim: true },

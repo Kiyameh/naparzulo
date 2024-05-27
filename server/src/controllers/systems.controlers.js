@@ -23,7 +23,6 @@ export const addSystem = async (req, res) => {
     depth,
   } = req.body;
   const newSystem = new System({
-    createdBy: req.user.id,
     dataSource,
     catalog,
     systemname,

@@ -21,7 +21,6 @@ export const addGroup = async (req, res) => {
     telephone,
   } = req.body;
   const newGroup = new Group({
-    createdBy: req.user.id,
     groupname,
     acronym,
     description,
